@@ -1,0 +1,18 @@
+<ion-view view-title="Lista Produtos">
+    <ion-nav-buttons name="BtnLogin" side="right">    
+        <button ng-click="newProduto()" class='button button-clear icon ion-person-add'></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" >
+            <div class="list card" id="troca"  ng-click="pgnItemTroca()">                 
+                <div class="item item-thumbnail-left"  ng-repeat="produto in produtos | orderBy:'data'">
+                    <img src="{{produto.imagem}}"/>
+                    <p> Produto: <h2>{{produto.produto}}</h2><p>
+                    <p>{{produto.whatsapp}}</p>
+                    <p>{{produto.contato}}</p>
+                </div>
+
+                <!--<button class="button button-balanced" ng-click=""></button>-->
+            </div>
+    </ion-content>
+</ion-view>
+

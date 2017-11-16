@@ -1,0 +1,22 @@
+<ion-view view-title="{{home}}" hide-back-button="true" >
+    <ion-nav-buttons side="right">
+    <button class="button button-clear" ng-click="logout()">Sair</button>
+    </ion-nav-buttons>
+    <ion-content id="home" class="padding">
+        <div class="spacer" style="height: 70px;"></div>
+            <center>
+                <div id="ListaTroca">
+                    <button type="button" class="button button-block button-positive" ng-click="listar()" >Lista de Trocas</button>
+                </div>
+                <div id="ListaVenda">
+                    <button type="button" class="button button-block button-positive" ng-click="listarVenda()">Lista de Vendas</button>
+                </div>
+                <div id="ListaAmbos">
+                    <button type="button" class="button button-block button-positive" ng-click="listarTrocaVenda()">Lista de Trocas/Vendas</button>
+                </div>
+                <div id="Cadastros">
+                    <button type="button" class="button button-block button-positive" ng-click="cadastros()">Cadastrar Produtos</button>
+                </div>
+            </center>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view view-title="ITENS VENDAS">
+    <ion-nav-buttons name="BtnLogin" side="right">    
+        <button ng-click="newProduto()" class="button button-clear ">Novo</button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list card" ng-repeat="itemVenda in itemVendas ">
+            <div id="TexTitulo" class="item item-text-wrap">
+                <h1 style="text-align: center;">{{itemVenda.produto}}</h1>
+            </div>
+            <div  class="item item-image" >           
+                <center><img src="{{itemVenda.imagem}}"></center>
+            </div>
+            <div class="item item-text-wrap">                    
+                <h2>Contato: {{itemVenda.contato}}</h2>
+                <h2>Descrição: {{itemVenda.descricao}}</h2>
+                <h2>Telefone: {{itemVenda.telefone}}</h2>
+                <h2>WhatsApp: {{itemVenda.whatsapp}}</h2>
+                <h2>Valor R$: {{itemVenda.preco}}</h2>
+                
+                <p style="text-align: right">Item troca e venda!</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

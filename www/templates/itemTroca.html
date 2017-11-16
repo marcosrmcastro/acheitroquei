@@ -1,0 +1,23 @@
+<ion-view view-title="ITENS TROCA">
+    <ion-nav-buttons name="BtnLogin" side="right">    
+        <button ng-click="newProduto()" class='button button-clear '>Novo</button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list card" ng-repeat="itemTroca in itemTrocas ">
+            <div id="TexTitulo" class="item item-text-wrap">
+                <h1 style="text-align: center;">{{itemTroca.produto}}</h1>
+            </div>
+            <div  class="item item-image" >           
+                <center><img src="{{itemTroca.imagem}}"></center>
+            </div>
+            <div class="item item-text-wrap">                    
+                <h2>Contato: {{itemTroca.contato}}</h2>
+                <h2>Descrição: {{itemTroca.descricao}}</h2>
+                <h2>Telefone: {{itemTroca.telefone}}</h2>
+                <h2>WhatsApp: {{itemTroca.whatsapp}}</h2>
+                
+                <p style="text-align: right">Item somente para troca!</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view view-title="CADASTRO TROCA "  hide-back-button="true" >     
+          
+            <ion-content class="padding">
+                   <form name="formTroca" ng-submit="registrarTroca(troca)">
+                       
+                        <ion-list>
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">Produto</span>
+                                <input type="text" ng-model="troca.produto" required>
+                            </ion-item>
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">Descrição </span>
+                                <input type="text" ng-model="troca.descricao" required >
+                            </ion-item>                
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">Contato</span>
+                                <input type="text" ng-model="troca.contato" required>
+                            </ion-item>
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">Telefone</span>
+                                <input type="text" ng-model="troca.telefone" required>
+                            </ion-item>                
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">WhatsApp</span>
+                                <input type="text" ng-model="troca.whatsapp" required>
+                            </ion-item>                          
+                            <ion-item class="item-input item-stacked-label" style="border-radius:20px;">
+                                <span class="input-label">Imagem</span>
+                                <center><img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center"/></center>                         
+                            </ion-item>
+                            
+                            <div class="spacer" style="height: 10px;"></div>
+                            <button type="button" class="button button-positive button-block" ng-click="tirarfoto()">Tirar Foto</button>
+                            <button class="button button-block button-balanced"  ng-disabled="formTroca.$invalid">Salvar</button>
+                            <div class="row">
+                                <div class="col col-50">
+                                    <button  type="button" class="button button-clear button-block" style="color:black; border: 2px solid black" ng-click="produto()">Cancelar</button>
+                                </div>
+                                <div class="col col-50">
+                                    <button  type="button" class="button button-clear button-block" style="color:black; border: 2px solid black" ng-click="sair()">Home</button>
+                                </div>
+                            </div>
+                           
+                        </ion-list>
+                    </form>
+             </ion-content>
+          </ion-view>>
